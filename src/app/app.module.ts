@@ -31,6 +31,7 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 import { BlogComponent } from './blog/blog.component';
 import { environment } from '../environments/environment';
 import { PostService } from './posts/shared/post.service';
+import { WeponService } from './core/services/wepon/wepon.service';
 
 
 
@@ -61,7 +62,7 @@ import { PostService } from './posts/shared/post.service';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule
   ],
-  providers: [/*BlogService,*/ ArmorService, AuthService, AuthGuard, PostService],
+  providers: [/*BlogService,*/ ArmorService, AuthService, AuthGuard, PostService,WeponService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

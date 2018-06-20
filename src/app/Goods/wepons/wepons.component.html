@@ -1,3 +1,20 @@
-<p>
-  wepons works!
-</p>
+<div class="row">
+<div *ngFor="let wep of wepon">
+  <div class="col-xs-8">
+    <div class="polaroid">
+      <h3>{{wep.Title}}</h3>
+      <img src="{{wep.ImgSrc}}" alt="" />
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="polaroid">
+      <p>{{wep.Description}}</p>
+      <br>
+      <br>
+      <p>wepon ID: {{wep.Id}}</p>
+    </div>
+  </div>
+</div>
+</div>

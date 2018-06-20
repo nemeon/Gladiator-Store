@@ -9,7 +9,7 @@ import { Post } from '../shared/post.model';
 })
 export class PostListComponent implements OnInit {
 
-  postList: Post[];
+  posts: Post[];
 
   constructor(public postService: PostService) { }
 
@@ -17,12 +17,12 @@ export class PostListComponent implements OnInit {
 
     var x = this.postService.getData();
     x.snapshotChanges().subscribe(item => {
-      this.postList = [];
+      this.posts = [];
       item.forEach(element => {
         var y = element.payload.toJSON();
         y["$key"] = element.key;
         if (y["username"] == sessionStorage.getItem("currentUser")) {
-          this.postList.push(y as Post);
+          this.posts.push(y as Post);
         }
       })
     })

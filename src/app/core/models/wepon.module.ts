@@ -1,10 +1,16 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+export class WeponModule { 
 
-@NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: []
-})
-export class WeponModule { }
+  Id: string;
+  Title: string;
+  Description: string;
+  ImgSrc: string;
+
+  constructor(id?: string, title?: string, description?: string, img?: string) {
+    this.Id = id;
+    this.Title = title;
+    this.Description = description;
+    this.ImgSrc = img;
+
+  }
+
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WeponService } from '../../core/services/wepon/wepon.service';
+import { WeponModule } from '../../core/models/wepon.module';
 
 @Component({
   selector: 'app-wepons',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wepons.component.css']
 })
 export class WeponsComponent implements OnInit {
-
-  constructor() { }
+  wepon: WeponModule[];
+  constructor(private weponService: WeponService) { 
+    this.wepon=weponService.takeAllWepons();
+  }
 
   ngOnInit() {
   }

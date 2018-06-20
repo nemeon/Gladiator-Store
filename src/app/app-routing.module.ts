@@ -7,7 +7,8 @@ import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { ArmorComponent } from './Goods/armor/armor.component'
+import { ArmorComponent } from './Goods/armor/armor.component';
+import { WeponsComponent } from './Goods/wepons/wepons.component';
 import { PostsComponent } from './posts/posts.component';
 import { AuthGuard } from './auth.guard';
 
@@ -20,6 +21,7 @@ const routes: Routes =
 { path: 'blog', component: BlogComponent, canActivate: [AuthGuard] },
 { path: 'posts', component: PostsComponent, canActivate: [AuthGuard] },
 { path: 'armor', component: ArmorComponent },
+{ path: 'wepon', component: WeponsComponent },
 { path: 'login', component: LoginComponent },
 { path: 'register', component: RegisterComponent },
 { path: '**', component: NotFoundComponent }
